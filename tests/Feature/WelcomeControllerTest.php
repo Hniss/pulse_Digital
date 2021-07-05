@@ -13,8 +13,9 @@ class WelcomeControllerTest extends TestCase
      *
      * @return void
      */
-    public function test_index()
+public function testBasicTest()
 {
-	
+    $response = $this->get('/');
+    $response->assertViewHas('message', 'Vous y êtes !');
 }
 }
