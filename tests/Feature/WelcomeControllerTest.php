@@ -15,5 +15,6 @@ class WelcomeControllerTest extends TestCase
      */
     public function test_index()
 {
+	
 }
 }
