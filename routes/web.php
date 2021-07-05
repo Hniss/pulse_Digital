@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Carbon\Carbon;
+
+use App\Http\Controllers\WelcomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,11 +14,20 @@ use Carbon\Carbon;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+*/
+
+
+Route::get('/', function () {
+    return view('coucou')->with('message', 'Vous y êtes !');
+});
+
+
+Route::get('welcome', [ WelcomeController::class, 'index']);
 
 Route::get('/corbon', function () {
     return view('corbon');
