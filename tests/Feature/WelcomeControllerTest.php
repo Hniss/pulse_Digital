@@ -15,7 +15,5 @@ class WelcomeControllerTest extends TestCase
      */
     public function test_index()
 {
-    $response = $this->get('welcome');
-    $response->assertStatus(200);
 }
 }
